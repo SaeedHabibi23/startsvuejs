@@ -1,4 +1,4 @@
-Vue.createApp({
+const vm = Vue.createApp({
     data(){
         return{
             firstName: 'Saeed' , 
@@ -7,11 +7,16 @@ Vue.createApp({
     }
 }).mount('#app')
 
-Vue.createApp({
-    data(){
-        return{
-            firstName: 'Ahmad' , 
-            lastName: 'Ahmadi'
-        }
-    }
-}).mount('#apptwo')
+setTimeout(() => {
+    vm.firstName = 'Karim'
+}, 6000);
+
+
+// Vue.createApp({
+//     data(){
+//         return{
+//             firstName: 'Ahmad' , 
+//             lastName: 'Ahmadi'
+//         }
+//     }
+// }).mount('#apptwo')
