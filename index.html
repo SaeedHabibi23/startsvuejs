@@ -8,7 +8,15 @@
 </head>
 <body>
     <div id="app">
-        {{ fullName() }}
+        <p> {{ fullName() }}</p>
+        <hr>
+
+        <label for="">first Name</label>
+        <input type="text" v-model="firstName"><br> 
+
+        <label for=""> Last Name</label>
+        <input type="text" v-model="lastName">
+       
       
         
     </div>
