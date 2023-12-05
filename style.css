@@ -1,0 +1,38 @@
+body{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+label{
+    margin-bottom: 20px;
+    font-size: 20px;
+    display: block;
+}
+select{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+input[type=number]{
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+.circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    color: #fff;
+    line-height: 150px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.purple{
+    background-color: blueviolet;
+}
+.text-black{
+color: black;
+}
+.text-orange{
+    color: orange;
+}

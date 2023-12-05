@@ -7,39 +7,24 @@
     <title>Vue JS Tutorial</title>
 </head>
 <body>
+   
+   
+
     <div id="app">
-        <p> {{ fullName }}</p>
-        <p><a v-bind:href="url" target="_blank" > Goggle </a></p>
-        <p v-html="raw_url"> </p>
-        <p>{{typeof age}}</p>
+        <label for=""> <input type="checkbox" v-model="isPurple"> Purple </label>
 
-        <!-- We Can Use : for v-bind  -->
-      
-        
-        <hr>
 
-        <label for="">first Name</label>
-        <input type="text" v-model.lazy.trim="firstName"><br> 
+        <select name="" id="" v-model="selectedColor">
+            <option value="">White</option>
+            <option value="text-black">black</option>
+            <option value="text-orange"> Orange </option>
+        </select>
 
-        <label for="">middle Name</label>
-        <input type="text" @keyup.enter="updatemiddleName"><br> 
 
-        <label for=""> Last Name</label>
-        <input type="text" :value="lastName" @input="updatelastName"><br>
-       
-        <label for=""> age </label>
-        <input type="number" v-model.number="age"> <br>
-      
-        <button type="button" @click="incrementage"> Increment </button>
-        <button type="button" @click="age--"> Decrement </button>
-        
+        <div class="circle" :class="[selectedColor, circle_classes]">
+            Hi
+        </div>
     </div>
-
-    <!-- <div id="apptwo">
-        {{ firstName }}
-        {{ lastName }}
-        
-    </div> -->
 
 
     <script src="https://unpkg.com/vue@3"></script>

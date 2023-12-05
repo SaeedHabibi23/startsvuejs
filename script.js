@@ -1,43 +1,16 @@
 const vm = Vue.createApp({
     data(){
         return{
-            firstName: 'Saeed' , 
-            middleName: '',
-            lastName: 'Kakkar' , 
-            url: 'https://google.com' , 
-            raw_url: '<a href="https://google.com" target="_blank" > Goggle </a>',
-            age: 21 ,
-
+            isPurple: false,
+            selectedColor: ''
+        }
+    },
+    computed:{
+        circle_classes(){
+            return {purple: this.isPurple}
         }
     }
-,
- methods: {
-   
-    incrementage(){
-         this.age++
-    } , 
-    updatelastName(event){
-        this.lastName = event.target.value 
-    } , 
-    updatemiddleName(event){
-        this.middleName = event.target.value 
-    }
-     
-} , 
-computed:{
- fullName(){
-        console.log("Full Name Computed Properties Was called")
-        return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
-    } , 
-} , 
-    watch:{
-        age(newVal , oldVal){
-            setTimeout(()=>{
-                this.age = 20
-            } , 3000)
-        }
-
-    }
+ 
  }).mount('#app')
 
 
