@@ -12,9 +12,7 @@ const vm = Vue.createApp({
     }
 ,
  methods: {
-    fullName(){
-        return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
-    } , 
+   
     incrementage(){
          this.age++
     } , 
@@ -25,6 +23,12 @@ const vm = Vue.createApp({
         this.middleName = event.target.value 
     }
      
+} , 
+computed:{
+ fullName(){
+        console.log("Full Name Computed Properties Was called")
+        return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
+    } , 
 }
  }).mount('#app')
 
