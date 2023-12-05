@@ -1,7 +1,12 @@
 const vm = Vue.createApp({
     data(){
        return{
-        mode: 3
+        birds: ['pigon' , 'eagles' , 'patrious' , 'gorgan'] , 
+        people:[
+         {name : 'saeed' , age:20} ,
+         {name : 'Ahmad' , age:24} , 
+         {name : 'Karim' , age:25}
+        ]
        }
     },
    

@@ -11,18 +11,21 @@
    
 
     <div id="app">
-       <p v-if="mode == 1"> Showing v-if directory content </p>
-       <templat v-else-if="mode == 2">
-       <p> Heading </p>
-       <h3 > Showing velse-if directory content </h3>
-       </templat>
-       <p v-else> Showing velse directory content </p>
+      <ul>
+        <li v-for="(bird, index) in birds">
+          {{bird}} - {{index}}
+        </li>
+      </ul>
 
-       <select name="" id="" v-model="mode">
-        <option value="1">if</option>
-        <option value="2">else if</option>
-        <option value="3">else</option>
-       </select>
+      <hr>
+
+      <ul>
+        <li v-for="person in people">
+          <div v-for="(value, key , index) in person"> 
+              {{key}}: {{value}} - Index:{{index}}
+          </div>
+        </li>
+      </ul>
     </div>
 
 
