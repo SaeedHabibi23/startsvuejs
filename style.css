@@ -1,38 +1,36 @@
 body{
     font-size: 20px;
     font-family: sans-serif;
+    padding-top: 10px;
+    background-color: azure;
 }
-label{
-    margin-bottom: 20px;
-    font-size: 20px;
-    display: block;
-}
-select{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-input[type=number]{
-    font-size: 20px;
-    margin-bottom: 20px;
-    display: block;
-}
-.circle{
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    background-color: lightgreen;
+#app{
     text-align: center;
-    color: #fff;
-    line-height: 150px;
-    font-size: 32px;
+}
+#app button{
+    background-color: blue;
+    border-color: transparent;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#app .card{
+    width: 400px;
+    margin: 15px auto;
+    padding-bottom: 15px;
+    box-shadow: 0 2px 3px black;
+    background-color: #fff;
+    color: #4a4a4a;
+    display: block;
+    padding: 1.7rem;
+}
+#app input:focus{
+    outline: 0;
+}
+#app input{
     font-weight: bold;
-}
-.purple{
-    background-color: blueviolet;
-}
-.text-black{
-color: black;
-}
-.text-orange{
-    color: orange;
+    width: 100%;
+    font-size: 1em;
+    padding: 5px 10px;
 }

@@ -1,14 +1,19 @@
 const vm = Vue.createApp({
     data(){
        return{
-        birds: ['pigon' , 'eagles' , 'patrious' , 'gorgan'] , 
         people:[
-         {name : 'saeed' , age:20} ,
-         {name : 'Ahmad' , age:24} , 
-         {name : 'Karim' , age:25}
+         {name : 'saeed' , message: 'Hello'} ,
+         {name : 'Ahmad' , message: 'Hi dear'} , 
+         {name : 'Karim' , message: 'holla karim'}
         ]
        }
     },
+    methods:{
+      move(){
+         const first = this.people.shift()
+         this.people.push(first)
+      }
+    }
    
  
  }).mount('#app')

@@ -11,21 +11,13 @@
    
 
     <div id="app">
-      <ul>
-        <li v-for="(bird, index) in birds">
-          {{bird}} - {{index}}
-        </li>
-      </ul>
+      <button type="button" class="move" @click="move"> Move To Bottom  </button>
+      <div class="card" v-for="person in people" :key="person.name">
+        <h3> {{person.name}} </h3>
+        <p> {{person.message}}  </p>
 
-      <hr>
-
-      <ul>
-        <li v-for="person in people">
-          <div v-for="(value, key , index) in person"> 
-              {{key}}: {{value}} - Index:{{index}}
-          </div>
-        </li>
-      </ul>
+        <input type="text">
+      </div>
     </div>
 
 
