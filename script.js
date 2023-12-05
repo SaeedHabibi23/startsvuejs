@@ -29,7 +29,15 @@ computed:{
         console.log("Full Name Computed Properties Was called")
         return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
     } , 
-}
+} , 
+    watch:{
+        age(newVal , oldVal){
+            setTimeout(()=>{
+                this.age = 20
+            } , 3000)
+        }
+
+    }
  }).mount('#app')
 
 
