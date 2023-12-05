@@ -11,22 +11,18 @@
    
 
     <div id="app">
-        <label for=""> <input type="checkbox" v-model="isPurple"> Purple </label>
+       <p v-if="mode == 1"> Showing v-if directory content </p>
+       <templat v-else-if="mode == 2">
+       <p> Heading </p>
+       <h3 > Showing velse-if directory content </h3>
+       </templat>
+       <p v-else> Showing velse directory content </p>
 
-
-        <select name="" id="" v-model="selectedColor">
-            <option value="">White</option>
-            <option value="text-black">black</option>
-            <option value="text-orange"> Orange </option>
-        </select>
-
-        <input type="number" v-model="size">
-
-
-        <div class="circle" :class="[selectedColor, circle_classes]" 
-        :style="[{width: size+'px', height: size+'px', lineHeight: size+ 'px'}, {transform: 'rotate(30deg)'}]">
-            Hi
-        </div>
+       <select name="" id="" v-model="mode">
+        <option value="1">if</option>
+        <option value="2">else if</option>
+        <option value="3">else</option>
+       </select>
     </div>
 
 
