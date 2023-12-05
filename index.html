@@ -11,7 +11,7 @@
         <p> {{ fullName() }}</p>
         <p><a v-bind:href="url" target="_blank" > Goggle </a></p>
         <p v-html="raw_url"> </p>
-        <p>{{age}}</p>
+        <p>{{typeof age}}</p>
 
         <!-- We Can Use : for v-bind  -->
       
@@ -19,7 +19,7 @@
         <hr>
 
         <label for="">first Name</label>
-        <input type="text" v-model="firstName"><br> 
+        <input type="text" v-model.lazy.trim="firstName"><br> 
 
         <label for="">middle Name</label>
         <input type="text" @keyup.enter="updatemiddleName"><br> 
@@ -27,9 +27,11 @@
         <label for=""> Last Name</label>
         <input type="text" :value="lastName" @input="updatelastName"><br>
        
+        <label for=""> age </label>
+        <input type="number" v-model.number="age"> <br>
       
         <button type="button" @click="incrementage"> Increment </button>
-        <button type="button" @click.ctrl="age--"> Decrement </button>
+        <button type="button" @click="age--"> Decrement </button>
         
     </div>
 
