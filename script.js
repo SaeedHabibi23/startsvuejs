@@ -1,29 +1,33 @@
 const vm = Vue.createApp({
-    data(){
-       return{
-        message: 'Hello World'
-       }
-    },
+
   
- }).mount('#app')
-
- 
-
-
- const vm2 = Vue.createApp({
+ })
+vm.component('hello' , {
+   template: `<h1> {{message}} </h1>` , 
    data(){
       return{
-       message: 'Hello World Two'
+         message: 'Hello Dear'
       }
-   },
-   render(){
-      return Vue.h(
-         'h1' ,
-         this.message
-      )
    }
+})
+vm.mount('#app')
  
-}).mount('#apptwo')
+
+
+//  const vm2 = Vue.createApp({
+//    data(){
+//       return{
+//        message: 'Hello World Two'
+//       }
+//    },
+//    render(){
+//       return Vue.h(
+//          'h1' ,
+//          this.message
+//       )
+//    }
+ 
+// }).mount('#apptwo')
 
 
 
